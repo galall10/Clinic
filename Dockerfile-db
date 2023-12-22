@@ -1,2 +1,9 @@
 FROM mongo:latest
-EXPOSE 5432
+
+WORKDIR /app
+
+EXPOSE 27017
+
+ENV BIND_IP_ALL=true
+
+CMD ["mongod","--bind_ip_all"]
